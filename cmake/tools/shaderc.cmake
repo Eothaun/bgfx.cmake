@@ -21,6 +21,13 @@ target_compile_definitions( shaderc PRIVATE "-D_CRT_SECURE_NO_WARNINGS" )
 set_target_properties( shaderc PROPERTIES FOLDER "bgfx/tools" )
 target_link_libraries( shaderc bx bimg bgfx-vertexdecl bgfx-shader-spirv fcpp glsl-optimizer glslang spirv-cross spirv-tools )
 
+set_target_properties( shaderc
+PROPERTIES
+ARCHIVE_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+LIBRARY_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+RUNTIME_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+)
+
 if( BGFX_CUSTOM_TARGETS )
 	add_dependencies( tools shaderc )
 endif()

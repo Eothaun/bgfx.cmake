@@ -21,3 +21,11 @@ if (IOS)
 	set_target_properties(texturev PROPERTIES MACOSX_BUNDLE ON
 										      MACOSX_BUNDLE_GUI_IDENTIFIER texturev)
 endif()
+
+
+set_target_properties( texturev
+PROPERTIES
+ARCHIVE_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+LIBRARY_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+RUNTIME_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+)

@@ -24,3 +24,10 @@ if (IOS)
 	set_target_properties(geometryc PROPERTIES MACOSX_BUNDLE ON
 											   MACOSX_BUNDLE_GUI_IDENTIFIER example-${ARG_NAME})
 endif()
+
+set_target_properties( geometryc
+PROPERTIES
+ARCHIVE_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+LIBRARY_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+RUNTIME_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+)

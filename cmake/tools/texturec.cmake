@@ -23,3 +23,10 @@ elseif (IOS)
 	set_target_properties(texturec PROPERTIES MACOSX_BUNDLE ON
 											  MACOSX_BUNDLE_GUI_IDENTIFIER texturec)
 endif()
+
+set_target_properties( texturec
+PROPERTIES
+ARCHIVE_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+LIBRARY_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+RUNTIME_OUTPUT_DIRECTORY "${TOOLS_DIR}"
+)
